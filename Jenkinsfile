@@ -4,7 +4,6 @@ pipeline {
         stage('initialize') {
             steps {
                 echo 'Building completed...............'
-                sh "snyk"
             }
         }
         
