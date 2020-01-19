@@ -7,6 +7,22 @@ pipeline {
             }
         }
         
+    stage('snyk dependency scan') {
+        
+      environment {
+        SNYK_TOKEN = credentials('Synk-agent')
+      }	
+      steps {
+        sh """
+          snyk auth ${SNYK_TOKEN}
+          snyk test --json \
+            --severity-threshold=high \
+            --file=yarn.lock \
+            --project-name=nodegoat
+        """		
+      }
+    }
+        
         stage('scan app packges') {
             steps {
             echo "start scan app depenicies"
