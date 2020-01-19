@@ -10,7 +10,7 @@ pipeline {
         stage('scan app packges') {
             steps {
             echo "start scan app depenicies"
-            sh "synk test"    
+          //  sh "synk test"    
             }
         }
         
