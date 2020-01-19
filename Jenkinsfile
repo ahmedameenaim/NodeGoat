@@ -10,7 +10,7 @@ pipeline {
         stage('snyk dependency scan') {
  
           steps {
-                "docker run -it  -v /var/lib/jenkins/workspace/nodegoat-pipline snyk/snyk-cli:npm test"
+             sh "docker run -it  -v /var/lib/jenkins/workspace/nodegoat-pipline snyk/snyk-cli:npm test"
           }
         }
         
