@@ -10,7 +10,7 @@ pipeline {
         stage('snyk dependency scan') {
  
           steps {
-             sh "docker run -it snyk/snyk-cli:npm test"
+             sh "docker run snyk/snyk-cli:npm test"
           }  
         }
         
