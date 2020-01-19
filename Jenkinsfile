@@ -6,6 +6,14 @@ pipeline {
                 echo 'Building completed...............'
             }
         }
+        
+        stage('scan app packges') {
+            steps {
+            echo "start scan app depenicies"
+            sh "synk test"    
+            }
+        }
+        
         stage('SAST') {
             steps {
                 echo 'SAST completed...............'
