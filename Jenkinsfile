@@ -8,10 +8,11 @@ pipeline {
         }
         
         stage('snyk dependency scan') {
-          environment {
+ 
+          steps {
+           environment {
             SNYK_TOKEN = credentials('Synk-agent')
           }	
-          steps {
             sh """
               snyk auth ${SNYK_TOKEN}
               snyk test --json \
