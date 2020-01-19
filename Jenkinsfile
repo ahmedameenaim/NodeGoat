@@ -12,8 +12,6 @@ pipeline {
           steps {
 
             sh """
-              npm install
-              npm install -g snyk
               snyk auth f8764dcb-48ac-473d-bf1d-e05c0a9862e9
               snyk test --json \
                 --severity-threshold=high \
