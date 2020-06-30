@@ -19,7 +19,7 @@ pipeline {
             steps {
                 echo 'SAST Started...............'
                 sh "python --version"
-                sh "njsscan --missing-controls --json /var/lib/jenkins/workspace/nodegoat-pipline/"
+                sh "sudo njsscan --missing-controls --json /var/lib/jenkins/workspace/nodegoat-pipline/"
              //   sh "docker pull secfigo/bandit"
              //  sh "docker run -v /var/lib/jenkins/workspace/vulnerable_python_app:/src --rm secfigo/bandit bandit -r /src || true" 
             }
