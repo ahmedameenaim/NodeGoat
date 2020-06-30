@@ -10,7 +10,8 @@ pipeline {
         stage('snyk dependency scan') {
  
           steps {
-            // sh "docker run -e SNYK_TOKEN=f8764dcb-48ac-473d-bf1d-e05c0a9862e9 -e MONITOR=true -v /var/lib/jenkins/workspace/nodegoat-pipline/:/project snyk/snyk-cli:npm test  || true"
+              echo 'dependency scan start...............'
+            // sh "docker run -e SNYK_TOKEN= -e MONITOR=true -v /var/lib/jenkins/workspace/nodegoat-pipline/:/project snyk/snyk-cli:npm test  || true"
           }  
         }
         
