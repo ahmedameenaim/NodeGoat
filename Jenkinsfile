@@ -18,7 +18,7 @@ pipeline {
         stage('SAST') {
             steps {
                 echo 'SAST Started...............'
-                sh "njsscan --json /var/lib/jenkins/workspace/nodegoat-pipline/"
+                sh "njsscan --missing-controls --json /var/lib/jenkins/workspace/nodegoat-pipline/"
              //   sh "docker pull secfigo/bandit"
              //  sh "docker run -v /var/lib/jenkins/workspace/vulnerable_python_app:/src --rm secfigo/bandit bandit -r /src || true" 
             }
